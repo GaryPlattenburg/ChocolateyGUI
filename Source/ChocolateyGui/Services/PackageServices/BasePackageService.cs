@@ -286,7 +286,7 @@ namespace ChocolateyGui.Services
 
             var packageConfigEntry =
                 this.PackageConfigEntries()
-                    .SingleOrDefault(
+                    .FirstOrDefault(
                         entry =>
                         string.Compare(entry.Id, packageInfo.Id, StringComparison.OrdinalIgnoreCase) == 0
                         && entry.Version == packageInfo.Version);
